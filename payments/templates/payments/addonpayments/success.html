@@ -1,0 +1,20 @@
+{% extends 'payments/addonpayments/addonpayments_base.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {{ block.super }} - {% trans 'Failure' %}
+{% endblock title %}
+
+{% block content %}
+    <div class="container steps col-xs-12">
+        <div class="row">
+            <div class="col-md-12 titlePage">
+                <h3 class="text-success">{% trans "Payment Success" %}</h3>
+                <p>{% trans 'The payment has been made correctly. You can access the details in the following link.' %}</p>
+            </div>
+        </div>
+        <div class="row">
+            <a style="margin-bottom: 15px" href="{{ return_url }}" target="_parent" class="btn btn-success pull-right" id="go-to-start">{% trans 'Go to details' %}</a>
+        </div>
+    </div>
+{% endblock content %}
