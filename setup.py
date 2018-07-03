@@ -18,7 +18,9 @@ PACKAGES = [
     'payments.sagepay',
     'payments.sofort',
     'payments.stripe',
-    'payments.wallet']
+    'payments.wallet',
+    'payments.sermepa',
+]
 
 REQUIREMENTS = [
     'braintree>=3.14.0',
@@ -28,7 +30,12 @@ REQUIREMENTS = [
     'requests>=1.2.0',
     'stripe>=1.9.8',
     'suds-jurko>=0.6',
-    'xmltodict>=0.9.2']
+    'xmltodict>=0.9.2',
+]
+
+DEPENDENCY_LINKS = [
+    'git+ssh@github.com:APSL/django-sermepa.git@packaging#egg=sermepa-1.1.4',
+]
 
 
 class PyTest(TestCommand):
@@ -74,6 +81,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules'],
     install_requires=REQUIREMENTS,
+    dependency_links=DEPENDENCY_LINKS,
     cmdclass={
         'test': PyTest},
     tests_require=[
