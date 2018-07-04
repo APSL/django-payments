@@ -31,6 +31,7 @@ REQUIREMENTS = [
     'stripe>=1.9.8',
     'suds-jurko>=0.6',
     'xmltodict>=0.9.2',
+    'sermepa==1.1.4',
 ]
 
 DEPENDENCY_LINKS = [
