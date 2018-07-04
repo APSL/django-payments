@@ -34,7 +34,7 @@ REQUIREMENTS = [
 ]
 
 DEPENDENCY_LINKS = [
-    'git+ssh@github.com:APSL/django-sermepa.git@packaging#egg=sermepa-1.1.4',
+    'git+ssh@github.com:APSL/django-sermepa.git@2.1.0#egg=sermepa-1.1.4',
 ]
 
 
