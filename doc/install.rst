@@ -5,7 +5,8 @@ Installation
 
    .. code-block:: bash
 
-      $ pip install django-payments
+      $ pip install git+https://github.com/APSL/django-sermepa@2.1.0#egg=django-sermepa
+      $ pip install git+https://github.com/APSL/django-payments@sermepa_integration#egg=django-payments
 
 #. Add the callback processor to your URL router::
 
@@ -44,7 +45,7 @@ Installation
       from django.shortcuts import get_object_or_404, redirect
       from django.template.response import TemplateResponse
       from payments import get_payment_model, RedirectNeeded
-   
+
       def payment_details(request, payment_id):
           payment = get_object_or_404(get_payment_model(), id=payment_id)
           try:

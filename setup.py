@@ -31,11 +31,6 @@ REQUIREMENTS = [
     'stripe>=1.9.8',
     'suds-jurko>=0.6',
     'xmltodict>=0.9.2',
-    'django-sermepa==1.1.4',
-]
-
-DEPENDENCY_LINKS = [
-    'git+ssh@github.com:APSL/django-sermepa.git@2.1.0#egg=django-sermepa-1.1.4',
 ]
 
 
@@ -82,7 +77,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules'],
     install_requires=REQUIREMENTS,
-    dependency_links=DEPENDENCY_LINKS,
     cmdclass={
         'test': PyTest},
     tests_require=[
